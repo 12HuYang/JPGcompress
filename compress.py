@@ -19,7 +19,7 @@ def openfile(frame,entrybox):
             originfile,extension=os.path.splitext(path+'/'+file)
             print(originfile,extension)
             if ('countresult' not in originfile) and ('training' not in originfile):
-                if extension=='.JPG':
+                if extension=='.JPG' or extension=='.png':
                     img=cv2.imread(path+'/'+file)
                     height,width,channel=img.shape
                     compressimg=cv2.resize(img,(int(width*percent),int(height*percent)),interpolation=cv2.INTER_LINEAR)
